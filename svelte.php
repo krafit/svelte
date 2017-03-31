@@ -1,13 +1,12 @@
 <?php
 /*
-Plugin Name: svelte share
-Plugin URI: https://krafit.de/wordpress/plugins/svelte
-Description: Zus&auml;tzliche Funktionen f&uuml;r den Betrieb von lab.krafit.de.
-Author: Simon Kraft (krafit.de)
-Author URI: https://krafit.de
-Version: 0.2 - Build 1407291716
-Text Domain: 	'svelte'
-Domain Path: 	/lang/
+Plugin Name: Svelte Sharing
+Description: Tinfoil hat Social Sharing
+Author: Simon Kraft
+Author URI: https://moenus.net
+Version: 0.3
+Text Domain: 'svelte'
+Domain Path: /lang/
 */
 
 
@@ -69,11 +68,7 @@ Domain Path: 	/lang/
 
 
 
-// ------------------  ------------------
-
-	// Load all styles and scripts we need
-
-
+// ------------------ Da output ------------------
 
 
 function krafit_svelte_core() {
@@ -87,7 +82,7 @@ function krafit_svelte_core() {
 	$svelte_language = str_replace('-','_',$svelte_language);
 
 
-		echo '<div class="svelte-social">Share:  ';
+		echo '<div class="svelte-social">';
 
 		svelte_before_sharing();
 
@@ -132,10 +127,3 @@ function krafit_svelte_core() {
 		echo '</div>';
 
 }
-
-
-
-// Hook krafit_svelte_core into out standard footer hook
-	if (has_action('entry_footer')) {
-    	add_action('entry_footer', 'krafit_svelte_core');
-	}
