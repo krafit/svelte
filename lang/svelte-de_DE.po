@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: svelte share\n"
+"POT-Creation-Date: 2015-01-05 19:13+0100\n"
+"PO-Revision-Date: 2015-01-05 19:13+0100\n"
+"Last-Translator: Simon Kraft (trns.nl) <simon@krafit.de>\n"
+"Language-Team: Simon Kraft (trns.nl) <simon@krafit.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin.php:19
+msgid "Sharing Settings"
+msgstr "Sharing Einstellungen"
+
+#: admin.php:19
+msgid "Sharing"
+msgstr "Sharing"
+
+#: admin.php:28
+msgid "Social Sharing Settings"
+msgstr "Social Sharing-Einstellungen"
+
+#: admin.php:106
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: admin.php:126
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: svelte.php:99
+msgid "Share on Facebook"
+msgstr "Auf Facebook teilen"
+
+#: svelte.php:99
+msgid "Facebook"
+msgstr "Facebook"
+
+#: svelte.php:103
+msgid "Tweet this Post"
+msgstr "Diesen Beitrag twittern"
+
+#: svelte.php:103
+msgid "Twitter"
+msgstr "Twitter"
+
+#: svelte.php:107
+msgid "Share on Google+"
+msgstr "Auf Google+ teilen"
+
+#: svelte.php:107
+msgid "Google+"
+msgstr "Google+"
+
+#: svelte.php:111
+msgid "Support via Flattr"
+msgstr "Via Flattr unterstützen"
+
+#: svelte.php:111
+msgid "Flattr"
+msgstr "Flattr"
+
+#: svelte.php:115
+msgid "Pin on Pinterest"
+msgstr "Auf Pinterest pinnen"
+
+#: svelte.php:115
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: svelte.php:119
+msgid "Share on App.net"
+msgstr "Auf App.net teilen"
+
+#: svelte.php:119
+msgid "App.net"
+msgstr "App.net"
+
+#: svelte.php:123
+msgid "Share on Xing"
+msgstr "Auf Xing teilen"
+
+#: svelte.php:123
+msgid "Xing"
+msgstr "Xing"
+
+#: svelte.php:127
+msgid "Share on Whatsapp"
+msgstr "Auf WhatsApp teilen"
+
+#: svelte.php:127
+msgid "Whatsapp"
+msgstr "Whatsapp"

@@ -1,8 +1,10 @@
-a.svelte {
+div.svelte-social a.svelte {
 	display: inline-block;
 	padding: 7px 9px;
+	margin-bottom: 3px;
 	background-color: lightgrey;
 	color: white;
+	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px;
 	webkit-transition: .5s background ease;
@@ -10,6 +12,14 @@ a.svelte {
 	-o-transition: .5s  background ease;
 	-ms-transition: .5s  background ease;
 	transition: .5s  background ease;
+}
+
+div.svelte-social a.svelte::selection {
+	background-color: transparent;
+}
+
+a.svelte.likes:before {
+	content: "\2665  ";
 }
 
 a.svelte:hover {
@@ -46,4 +56,8 @@ a.svelte.xing:hover {
 
 a.svelte.whatsapp:hover {
  	background-color: #34af23;	
+}
+
+a.svelte.likes:hover {
+	background-color: #fab313;
 }
