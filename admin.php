@@ -32,13 +32,22 @@
 					<?php settings_fields('krafit_svelte_plugin_options'); ?>
 					<?php $options = get_option('krafit_svelte_options'); ?>
 
-
 					<table class="form-table">
-
 
 						<!-- Checkbox Buttons -->
 						<tr valign="top">
-							<th scope="row">Sharing-Services</th>
+							<th scope="row"><?php _e( 'Display options', 'svelte' ) ?></th>
+							<td>
+								<!-- Posts checkbox button -->
+								<label><input name="krafit_svelte_options[show_on_posts]" type="checkbox" value="1" <?php if (isset($options['show_on_posts'])) { checked('1', $options['show_on_posts']); } ?> /> <?php _e( 'Show on posts', 'svelte' ) ?></label><br />
+
+								<!-- Pages checkbox button -->
+								<label><input name="krafit_svelte_options[show_on_pages]" type="checkbox" value="1" <?php if (isset($options['show_on_pages'])) { checked('1', $options['show_on_pages']); } ?> /> <?php _e( 'Show on pages', 'svelte' ) ?></label><br />
+							</td>
+						</tr>
+
+						<tr valign="top">
+							<th scope="row"><?php _e( 'Sharing-Services', 'svelte' ) ?></th>
 							<td>
 								<!-- Facebook checkbox button -->
 								<label><input name="krafit_svelte_options[facebook]" type="checkbox" value="1" <?php if (isset($options['facebook'])) { checked('1', $options['facebook']); } ?> /> Facebook</label><br />
@@ -61,8 +70,8 @@
 								<!-- Xing checkbox button -->
 								<label><input name="krafit_svelte_options[xing]" type="checkbox" value="1" <?php if (isset($options['xing'])) { checked('1', $options['xing']); } ?> /> Xing </label><br />
 							
-								<!-- Whatsapp checkbox button -->
-								<label><input name="krafit_svelte_options[whatsapp]" type="checkbox" value="1" <?php if (isset($options['whatsapp'])) { checked('1', $options['whatsapp']); } ?> /> Whatsapp </label>
+								<!-- WhatsApp checkbox button -->
+								<label><input name="krafit_svelte_options[whatsapp]" type="checkbox" value="1" <?php if (isset($options['whatsapp'])) { checked('1', $options['whatsapp']); } ?> /> WhatsApp </label>
 							
 							</td>
 						</tr>
@@ -70,16 +79,16 @@
 						<?php if($options['twitter'] == '1' ): ?>
 						<!-- Textbox Control -->
 						<tr>
-							<th scope="row">Sidewide Twitter name</th>
+							<th scope="row"><?php _e( 'Sidewide Twitter name', 'svelte' ) ?></th>
 							<td>
 								<input type="text" size="57" name="krafit_svelte_options[twitter_global]" value="<?php echo $options['twitter_global']; ?>" />
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">Personal Twitter name</th>
+							<th scope="row"><?php _e( 'Personal Twitter name', 'svelte' ) ?></th>
 							<td>
-								<label><input name="krafit_svelte_options[allow_twitter_overwrite]" type="checkbox" value="1" <?php if (isset($options['allow_twitter_overwrite'])) { checked('1', $options['allow_twitter_overwrite']); } ?> /> yes</label><br />
-								<small>Allow authors to overwrite global Twitter name with their personal name?</small>
+								<label><input name="krafit_svelte_options[allow_twitter_overwrite]" type="checkbox" value="1" <?php if (isset($options['allow_twitter_overwrite'])) { checked('1', $options['allow_twitter_overwrite']); } ?> /> <?php _e( 'Allow', 'svelte' ) ?></label><br />
+								<small><?php _e( 'Allow authors to overwrite global Twitter name with their personal name?', 'svelte' ) ?></small>
 							</td>
 						</tr>
 						<?php endif; ?>
@@ -87,16 +96,16 @@
 						<?php if($options['flattr'] == '1' ): ?>
 						<!-- Textbox Control -->
 						<tr>
-							<th scope="row">Global flattr ID</th>
+							<th scope="row"><?php _e( 'Global Flattr ID', 'svelte' ) ?></th>
 							<td>
 								<input type="text" size="57" name="krafit_svelte_options[flattr_global]" value="<?php echo $options['flattr_global']; ?>" />
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">Personal flattr ID</th>
+							<th scope="row"><?php _e( 'Personal Flattr ID', 'svelte' ) ?></th>
 							<td>
-								<label><input name="krafit_svelte_options[allow_flattr_overwrite]" type="checkbox" value="1" <?php if (isset($options['allow_flattr_overwrite'])) { checked('1', $options['allow_flattr_overwrite']); } ?> /> yes</label><br />
-								<small>Allow authors to overwrite global flattr ID with their personal flattr ID?</small>
+								<label><input name="krafit_svelte_options[allow_flattr_overwrite]" type="checkbox" value="1" <?php if (isset($options['allow_flattr_overwrite'])) { checked('1', $options['allow_flattr_overwrite']); } ?> /> <?php _e( 'Allow', 'svelte' ) ?></label><br />
+								<small><?php _e( 'Allow authors to overwrite global flattr ID with their personal flattr ID?', 'svelte' ) ?></small>
 							</td>
 						</tr>
 						<?php endif; ?>
