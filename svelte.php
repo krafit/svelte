@@ -5,8 +5,7 @@ Description: Tinfoil hat Social Sharing
 Author: Simon Kraft
 Author URI: https://moenus.net
 Version: 0.3
-Text Domain: 'svelte'
-Domain Path: /lang/
+Text Domain: svelte
 */
 
 
@@ -20,16 +19,18 @@ Domain Path: /lang/
 		add_action('admin_menu', 'krafit_svelte_add_options_page');
 		add_filter( 'plugin_action_links', 'krafit_svelte_plugin_action_links', 10, 2 );
 
+		
+
 	// Delete options table entries ONLY when plugin deactivated AND deleted
 		function krafit_svelte_delete_plugin_options() {
 			delete_option('krafit_svelte_options');
 		}
 
-	// Set textdomain
-		function krafit_svelte_lang_init() {
-		  load_plugin_textdomain( 'svelte', false, 'svelte/languages' );
-		}
-		add_action('init', 'krafit_svelte_lang_init');
+	// // Set textdomain / load translations
+	function krafit_svelte_lang_init() {
+			load_plugin_textdomain( 'svelte', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+	add_action('init', 'krafit_svelte_lang_init');
 
 
 
@@ -119,7 +120,7 @@ function krafit_svelte_core() {
 		endif; 
 
 		if($options['whatsapp'] == '1' && wp_is_mobile ()):
-		echo ' <a class="svelte whatsapp" href="whatsapp://send?text=' . $svelte_title . '%20-%20' . $svelte_link .'" alt="' . __('Share on Whatsapp', 'svelte' ) . '" title="' . __('Share on Whatsapp', 'svelte' ) . '" target="_blank">' . __('Whatsapp', 'svelte' ) . '</a>';
+		echo ' <a class="svelte whatsapp" href="whatsapp://send?text=' . $svelte_title . '%20-%20' . $svelte_link .'" alt="' . __('Share on WhatsApp', 'svelte' ) . '" title="' . __('Share on WhatsApp', 'svelte' ) . '" target="_blank">' . __('WhatsApp', 'svelte' ) . '</a>';
 		endif; 
 
 		svelte_after_sharing();
