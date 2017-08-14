@@ -38,7 +38,18 @@
 
 						<!-- Checkbox Buttons -->
 						<tr valign="top">
-							<th scope="row">Sharing-Services</th>
+							<th scope="row"><?php _e( 'Display options', 'svelte' ) ?></th>
+							<td>
+								<!-- Posts checkbox button -->
+								<label><input name="krafit_svelte_options[show_on_posts]" type="checkbox" value="1" <?php if (isset($options['show_on_posts'])) { checked('1', $options['show_on_posts']); } ?> /> <?php _e( 'Show on posts', 'svelte' ) ?></label><br />
+
+								<!-- Pages checkbox button -->
+								<label><input name="krafit_svelte_options[show_on_pages]" type="checkbox" value="1" <?php if (isset($options['show_on_pages'])) { checked('1', $options['show_on_pages']); } ?> /> <?php _e( 'Show on pages', 'svelte' ) ?></label><br />
+							</td>
+						</tr>
+
+						<tr valign="top">
+							<th scope="row"><?php _e( 'Sharing-Services', 'svelte' ) ?></th>
 							<td>
 								<!-- Facebook checkbox button -->
 								<label><input name="krafit_svelte_options[facebook]" type="checkbox" value="1" <?php if (isset($options['facebook'])) { checked('1', $options['facebook']); } ?> /> Facebook</label><br />
