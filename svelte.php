@@ -91,35 +91,35 @@ function krafit_svelte_core() {
 				<span class="sociallink krafitlike"><?php krafit_likes(); ?></span>
 		<?php }
 
-		if($options['facebook'] == '1' ):
+		if(isset($options['facebook']) && $options['facebook'] == '1' ):
 			echo '<a class="svelte facebook" href="https://www.facebook.com/sharer.php?u=' . $svelte_link . '&amp;t=' . $svelte_title . '" alt="' . __('Share on Facebook', 'svelte' ) . '" title="' . __('Share on Facebook', 'svelte' ) . '" target="_blank">' . __('Facebook', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['twitter'] == '1' ):		 
+		if(isset($options['twitter']) && $options['twitter'] == '1' ):		 
 		echo ' <a class="svelte twitter" href="https://twitter.com/share?text=' . $svelte_title .'%20-&amp;url=' . $svelte_link .'&amp;via=krafit" alt="' . __('Tweet this Post', 'svelte' ) . '" title="' . __('Tweet this Post', 'svelte' ) . '" target="_blank">' . __('Twitter', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['googleplus'] == '1' ):
+		if(isset($options['googleplus']) && $options['googleplus'] == '1' ):
 		echo ' <a class="svelte googleplus" href="https://plusone.google.com/_/+1/confirm?hl=' . $svelte_language . '&amp;url=' . $svelte_link .'" alt="' . __('Share on Google+', 'svelte' ) . '" title="' . __('Share on Google+', 'svelte' ) . '" target="_blank">' . __('Google+', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['flattr'] == '1' ):
+		if(isset($options['flattr']) && $options['flattr'] == '1' ):
 		echo ' <a class="svelte flattr" href="https://flattr.com/submit/auto?user_id=' . $flattrID . '&amp;url=' . $svelte_link . '&amp;title=' . $svelte_title . '&amp;language=' . $svelte_language . '&amp;&amp;category=text" alt="' . __('Support via Flattr', 'svelte' ) . '" title="' . __('Support via Flattr', 'svelte' ) . '" target="_blank">' . __('Flattr', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['pinterest'] == '1' ):
+		if(isset($options['pinterest']) && $options['pinterest'] == '1' ):
 		echo ' <a class="svelte pinterest" href="http://www.pinterest.com/pin/create/button/?url=' . $svelte_link . ( (function_exists('the_post_thumbnail')) ? '&amp;media=' . wp_get_attachment_url(get_post_thumbnail_id()) : '') . '&amp;description=' . $svelte_title . '%20-%20' . $svelte_link . '" alt="' . __('Pin on Pinterest', 'svelte' ) . '" title="' . __('Pin on Pinterest', 'svelte' ) . '" target="_blank">' . __('Pinterest', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['appnet'] == '1' ):
+		if(isset($options['appnet']) && $options['appnet'] == '1' ):
 		echo ' <a class="svelte appnet" href="https://alpha.app.net/intent/post?text=' . $svelte_title . '%20' . $svelte_link . '" alt="' . __('Share on App.net', 'svelte' ) . '" title="' . __('Share on App.net', 'svelte' ) . '" target="_blank">' . __('App.net', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['xing'] == '1' ):
+		if(isset($options['xing']) && $options['xing'] == '1' ):
 		echo ' <a class="svelte xing" href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=' . $svelte_link .'" alt="' . __('Share on Xing', 'svelte' ) . '" title="' . __('Share on Xing', 'svelte' ) . '" target="_blank">' . __('Xing', 'svelte' ) . '</a>';
 		endif; 
 
-		if($options['whatsapp'] == '1' && wp_is_mobile ()):
+		if(isset($options['whatsapp']) && $options['whatsapp'] == '1' && wp_is_mobile ()):
 		echo ' <a class="svelte whatsapp" href="whatsapp://send?text=' . $svelte_title . '%20-%20' . $svelte_link .'" alt="' . __('Share on WhatsApp', 'svelte' ) . '" title="' . __('Share on WhatsApp', 'svelte' ) . '" target="_blank">' . __('WhatsApp', 'svelte' ) . '</a>';
 		endif; 
 
