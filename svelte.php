@@ -3,8 +3,8 @@
 Plugin Name: Svelte Sharing
 Description: Tinfoil hat Social Sharing
 Author: Simon Kraft
-Author URI: https://moenus.net
-Version: 0.4
+Author URI: https://simonkraft.de
+Version: 0.4.1
 Text Domain: svelte
 */
 
